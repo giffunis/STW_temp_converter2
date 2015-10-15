@@ -4,7 +4,6 @@ function Medida(valor, tipo){
   // Declaración de variables
   this.valor = valor;
   this.tipo = tipo;
-  this.todo = valor + tipo;
 
   // Funciones de la clase Medida
   this.get_valor = function(){return this.valor;}
@@ -21,12 +20,38 @@ Temperatura.prototype = new Medida() // Definimos la clase Temperatura como una 
 Temperatura.prototype.c_to_f = function(){
   this.valor = this.valor * (9/5) + 32;
   this.tipo = "F";
-  this.todo = this.valor + this.tipo;
+  salida = this.valor.toFixed(1) + this.tipo;
+  return salida;
 }
 
 // De grados farenheit a centígrados
 Temperatura.prototype.f_to_c = function(){
   this.valor = (this.valor - 32) * (5/9);
   this.tipo = "C";
-  this.todo = this.valor + this.tipo;
+  salida = this.valor.toFixed(1) + this.tipo;
+  return salida;
+}
+
+function convertir(){
+  var var_in = entrada.value;
+  var var_out;
+  var regexp = /([+-]?\d+(?:\.\d*)?(?:\s*[e]\d+)?)\s*([fFcC])/;
+
+  var aux = var_in.match(regexp);
+
+  temp = new Temperatura(aux[1],aux[2]);
+
+  if(temp !== undefined){  //  si existe temp
+
+   if(temp.get_tipo() == 'C' || temp.get_tipo() == 'c'){
+     resultado = temp.c_to_f();
+   }
+   else{
+     resultado = temp.f_to_c();
+   }
+   salida.innerHTML = resultado;
+ }
+ else{ //  Si no existe aux
+   salida.innerHTML = "ERROR! Try something like '-4.2C' instead";
+ } //  Si no existe aux
 }
