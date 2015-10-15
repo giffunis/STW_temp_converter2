@@ -8,9 +8,15 @@
   </head>
   <body>
     <div id="mocha"></div>
+    <input id="entrada" placeholder="30C" size="20">
+    <span class="output" id="salida"></span>
+
+    <script src="chai.js"></script>
     <script src="mocha.js"></script>
-    <script>mocha.setup('bdd');</script>
+    <script src="../js/temperatura.js"></script>
+    <script>mocha.setup('tdd');</script>
     <script src="tests.js"></script>
+
     <script>
       mocha.run();
     </script>
