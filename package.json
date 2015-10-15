@@ -1,0 +1,22 @@
+{
+  "name": "conversor-temp-2",
+  "version": "0.0.2",
+  "description": "Herencia de clases",
+  "main": "js/temperatura.js",
+  "scripts": {
+    "test": "open tests/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giffunis/STW_temp_converter2.git"
+  },
+  "keywords": [
+    "regexp"
+  ],
+  "author": "José Saúl Giffuni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giffunis/STW_temp_converter2/issues"
+  },
+  "homepage": "https://github.com/giffunis/STW_temp_converter2#readme"
+}
