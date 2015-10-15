@@ -11,3 +11,13 @@ function Medida(valor, tipo){
   this.set_valor = function(valor){this.valor = valor;}
   this.set_tipo = function(tipo){this.tipo = tipo;}
 }
+
+function Temperatura(){}
+
+Temperatura.prototype = new Medida() // Definimos la clase Temperatura como una clase hija de Medida
+
+// De grados centígrados a farenheit
+Temperatura.prototype.c_to_f = function(){
+  this.valor = this.valor * (9/5) + 32;
+  this.tipo = "F";
+}
