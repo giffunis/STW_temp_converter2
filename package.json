@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/giffunis/STW_temp_converter2/issues"
   },
-  "homepage": "https://github.com/giffunis/STW_temp_converter2#readme"
+  "homepage": "https://github.com/giffunis/STW_temp_converter2#readme",
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "mocha": "latest"
+  }
 }
