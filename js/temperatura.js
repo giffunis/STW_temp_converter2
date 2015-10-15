@@ -20,7 +20,7 @@ Temperatura.prototype = new Medida() // Definimos la clase Temperatura como una 
 Temperatura.prototype.c_to_f = function(){
   this.valor = this.valor * (9/5) + 32;
   this.tipo = "F";
-  salida = this.valor.toFixed(1) + this.tipo;
+  var salida = this.valor.toFixed(1) + this.tipo;
   return salida;
 }
 
@@ -28,7 +28,7 @@ Temperatura.prototype.c_to_f = function(){
 Temperatura.prototype.f_to_c = function(){
   this.valor = (this.valor - 32) * (5/9);
   this.tipo = "C";
-  salida = this.valor.toFixed(1) + this.tipo;
+  var salida = this.valor.toFixed(1) + this.tipo;
   return salida;
 }
 
@@ -39,17 +39,19 @@ function convertir(){
 
   var aux = var_in.match(regexp);
 
-  temp = new Temperatura(aux[1],aux[2]);
+  temp = new Temperatura(0,'x');
+  temp.set_tipo(aux[2]);
+  temp.set_valor(aux[1]);
 
   if(temp !== undefined){  //  si existe temp
 
    if(temp.get_tipo() == 'C' || temp.get_tipo() == 'c'){
-     resultado = temp.c_to_f();
+     var_out = temp.c_to_f();
    }
    else{
-     resultado = temp.f_to_c();
+     var_out = temp.f_to_c();
    }
-   salida.innerHTML = resultado;
+   salida.innerHTML = var_out;
  }
  else{ //  Si no existe aux
    salida.innerHTML = "ERROR! Try something like '-4.2C' instead";
