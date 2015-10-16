@@ -3,3 +3,9 @@
 ## Conversor de temperatura en Javascript parte 2
 
 En esta ocasión, hemos realizado la práctica introduciendo herencia o el prototipado, tal y como se conoce en Javascript. Además, hemos introducido, Sinon y Blanket.
+
+Links:
+
+* [Despliegue en GitHub](http://giffunis.github.io/STW_temp_converter2/)
+* [Test](http://giffunis.github.io/STW_temp_converter2/)
+* [Mi página web en GitHub](http://giffunis.github.io)
