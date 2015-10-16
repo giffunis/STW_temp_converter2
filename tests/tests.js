@@ -36,7 +36,7 @@ describe("Pruebas BDD", function() {
       var temp3 = new Temperatura(0,0);
       temp3.set_valor(30);
       var salida = temp3.get_valor();
-      expect(salida).to.equal("30");
+      expect(salida).to.equal(30);
     });
 
     it("get_tipo", function() {
