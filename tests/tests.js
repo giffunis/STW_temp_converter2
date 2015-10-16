@@ -60,11 +60,6 @@ describe("Pruebas BDD", function() {
       expect(salida.innerHTML).to.equal("32.0F");
     });
     
-    it("convertir(0X)", function() {
-      entrada.value = "0X";
-      convertir();
-      expect(salida.innerHTML).to.equal("ERROR! Try something like '-4.2C' instead");
-    });
     
   }); 
 
