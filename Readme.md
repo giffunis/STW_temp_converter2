@@ -7,5 +7,5 @@ En esta ocasión, hemos realizado la práctica introduciendo herencia o el proto
 Links:
 
 * [Despliegue en GitHub](http://giffunis.github.io/STW_temp_converter2/)
-* [Test](http://giffunis.github.io/STW_temp_converter2/)
+* [Test](http://giffunis.github.io/STW_temp_converter2/tests/test.html)
 * [Mi página web en GitHub](http://giffunis.github.io)
