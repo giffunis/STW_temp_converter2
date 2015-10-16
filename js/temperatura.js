@@ -25,10 +25,10 @@ function Temperatura(){
 Temperatura.prototype.convert = function(){
   if(this.tipo === 'C' || this.tipo ==='c'){
     var aux = this.valor * (9/5) + 32;
-    return (aux + 'F');
+    return (aux.toFixed(1) + 'F');
   }else{
     var aux = (this.valor - 32) * (5/9);
-    return (aux + 'C');
+    return (aux.toFixed(1) + 'C');
   }
 }
 
