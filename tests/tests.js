@@ -3,7 +3,7 @@ var expect = chai.expect;
 describe("Pruebas BDD", function() {
   var temp = new Temperatura(0,0);
   var temp2 = new Temperatura(0,0);
-
+ var aux = document.getElementById("salida");
 
   describe("Probando los sets", function() {
     it("Debe valer el tipo F", function() {
@@ -30,5 +30,22 @@ describe("Pruebas BDD", function() {
       expect(salida).to.equal("32.0F");
     });
   });
+  
+  describe("gets", function() {
+    it("get_valor", function() {
+      var temp3 = new Temperatura(0,0);
+      temp3.set_valor(30);
+      var salida = temp3.get_valor();
+      expect(salida).to.equal("30");
+    });
+
+    it("get_tipo", function() {
+      var temp3 = new Temperatura(0,0);
+      temp3.set_tipo('c');
+      var salida = temp3.get_tipo();
+      expect(salida).to.equal("c");
+    });
+  });
+ 
 
 });
