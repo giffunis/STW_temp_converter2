@@ -46,6 +46,13 @@ describe("Pruebas BDD", function() {
       expect(salida).to.equal("c");
     });
   });
- 
+
+  describe("convertir()", function() {
+    it("get_valor", function() {
+      entrada.value = "32F";
+      converter();
+      expect(salida.innerHTML).to.equal("0.0C");
+    });
+  }); 
 
 });
