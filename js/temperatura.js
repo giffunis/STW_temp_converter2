@@ -18,9 +18,9 @@ function Medida(){
   }
 }
 
-function Temperatura(cadena){}
-
-Temperatura.prototype = new Medida(cadena) // Definimos la clase Temperatura como una clase hija de Medida
+function Temperatura(){
+  Medida.call(this)
+}
 
 Temperatura.prototype.convert = function(){
   if(this.tipo === 'C' || this.tipo ==='c'){
