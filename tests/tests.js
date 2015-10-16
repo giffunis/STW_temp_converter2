@@ -50,7 +50,7 @@ describe("Pruebas BDD", function() {
   describe("convertir()", function() {
     it("get_valor", function() {
       entrada.value = "32F";
-      converter();
+      convertir();
       expect(salida.innerHTML).to.equal("0.0C");
     });
   }); 
