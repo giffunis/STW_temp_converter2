@@ -1,25 +1,30 @@
 "use stric";
 
+
 function Medida(){
-  // Declaración de variables
   this.valor;
   this.tipo;
 
-  // Funciones de la clase Medida
-  this.getValor = function(){return this.valor;}
-  this.getTipo = function(){return this.tipo;}
-  this.setValor = function(valor){this.valor = valor;}
-  this.setTipo = function(tipo){this.tipo = tipo;}
-  this.set = function(cadena){
-    var regexp = /([+-]?\d+(?:\.\d*)?(?:\s*[e]\d+)?)\s*([fFcC])/;
-    var aux = cadena.match(regexp);
-    this.valor = aux[1];
-    this.tipo = aux[2];
+  var datosEntrada = arguments[0];
+  var ndatosEntrada = datosEntrada.length;
+  switch (ndatosEntrada) {
+    case 1: // only one argument.
+      var regexp = /([+-]?\d+(?:\.\d*)?(?:\s*[e]\d+)?)\s*([fFcC])/;
+      var aux = datosEntrada[0].match(regexp);
+      this.valor = aux[1];
+      this.tipo = aux[2];
+      break;
+    case 2:
+      this.valor = datosEntrada[0];
+      this.tipo = datosEntrada[1];
+      break;
+    default:
+      alert("Error interno");
   }
 }
 
 function Temperatura(){
-  Medida.call(this)
+  Medida.call(this,arguments);
 }
 
 Temperatura.prototype.convert = function(){
@@ -32,9 +37,7 @@ Temperatura.prototype.convert = function(){
   }
 }
 
-
 function convertir(){
-  temp = new Temperatura();
-  temp.set(entrada.value);
+  temp = new Temperatura(entrada.value);
   salida.innerHTML = temp.convert();
 }
